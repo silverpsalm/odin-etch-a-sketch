@@ -6,3 +6,11 @@ const square = document.createElement("div");
 square.className = "square";
 container.appendChild(square);
 }
+
+container.addEventListener("mouseover",(event) =>{
+    // change color
+    if (event.target.className = "square") {
+    event.target.style.backgroundColor = "red";
+    }
+})
+
