@@ -12,5 +12,14 @@ container.addEventListener("mouseover",(event) =>{
     if (event.target.className = "square") {
     event.target.style.backgroundColor = "red";
     }
+
+    
+})
+
+container.addEventListener("mouseout",(event) => {
+    // change color back on mouse leave
+    if(event.target.className = "square") {
+        event.target.style.backgroundColor = "white";
+    }
 })
 
