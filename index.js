@@ -41,7 +41,7 @@ btn.addEventListener("click", (e) => {
         newSquare.className = "square";
         // set new square size based on percentage
         newSquare.style.flexBasis = squarePercent + "%";
-    
+        newSquare.style.opacity = 1.0;
         container.appendChild(newSquare);
     }
 })
