@@ -45,11 +45,3 @@ btn.addEventListener("click", (e) => {
         container.appendChild(newSquare);
     }
 })
-
-/* extra credit: darken square by 10% each time:
-
-    make squares turn black instead of red
-    on mouseout, reduce square opacity by 10
-
-
-*/
