@@ -10,7 +10,6 @@ for (i = 0; i < 16; i++) {
 
 container.addEventListener("mouseover", (event) => {
     // change color
-    console.log(event.target.id);
     if (event.target.id != "container") {
         event.target.classList.add("active");
     }
@@ -20,7 +19,6 @@ container.addEventListener("mouseover", (event) => {
 
 container.addEventListener("mouseout", (event) => {
     // change color back on mouse leave
-    console.log(event.target.classList);
     if (event.target.id != "container") {
         event.target.classList.remove("active");
     }
@@ -39,4 +37,6 @@ btn.addEventListener("click", (e) => {
     container.innerHTML = '';     // delete current squares in grid
     // set new square size based on percentage
     let newSquare = document.createElement("div");
+    newSquare.className = "square";
+    console.log(newSquare.className);
 })
