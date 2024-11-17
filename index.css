@@ -14,7 +14,6 @@
 .square {
     flex-grow:1; 
     flex-shrink:1; 
-    flex-basis: 25%; 
     aspect-ratio: 1 / 1;
     background-color: white;
     box-sizing:border-box;
