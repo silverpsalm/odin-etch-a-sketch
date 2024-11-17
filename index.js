@@ -27,16 +27,18 @@ container.addEventListener("mouseout", (event) => {
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", (e) => {
-
-    console.log(e);
-
     // button event listener
     let sideCount = prompt("How many squares per side?", "(max 100)");
     let squareTotal = sideCount * sideCount; // total square #
     let squarePercent = 100 / sideCount; // Flex Basis value for new squares
     container.innerHTML = '';     // delete current squares in grid
-    // set new square size based on percentage
-    let newSquare = document.createElement("div");
-    newSquare.className = "square";
-    newSquare.style.flexBasis = squarePercent + "%";
+    // generate new squares:
+    for (i = 0 ; i < squareTotal ; i++) {
+        let newSquare = document.createElement("div");
+        newSquare.className = "square";
+        // set new square size based on percentage
+        newSquare.style.flexBasis = squarePercent + "%";
+    
+        container.appendChild(newSquare);
+    }
 })
