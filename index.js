@@ -38,5 +38,5 @@ btn.addEventListener("click", (e) => {
     // set new square size based on percentage
     let newSquare = document.createElement("div");
     newSquare.className = "square";
-    console.log(newSquare.className);
+    newSquare.style.flexBasis = squarePercent + "%";
 })
