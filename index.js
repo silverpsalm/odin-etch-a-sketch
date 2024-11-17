@@ -9,8 +9,9 @@ container.appendChild(square);
 
 container.addEventListener("mouseover",(event) =>{
     // change color
-    if (event.target.className = "square") {
-    event.target.style.backgroundColor = "red";
+    console.log(event.target.id);
+    if (event.target.id != "container") {
+    event.target.classList.add("active");
     }
 
     
@@ -18,17 +19,26 @@ container.addEventListener("mouseover",(event) =>{
 
 container.addEventListener("mouseout",(event) => {
     // change color back on mouse leave
-    if(event.target.className = "square") {
-        event.target.style.backgroundColor = "white";
+    console.log(event.target.classList);
+    if(event.target.id != "container") {
+        event.target.classList.remove("active");
     }
 })
 
 const btn = document.querySelector("button");
 
 btn.addEventListener("click",(e) => {
-console.log(e);
+
+    console.log(e);
+
     // button event listener
     let sideCount = prompt("How many squares per side?","(max 100)");
+    let squareTotal = sideCount * sideCount; // total square #
+    let squarePercent = 100 / sideCount; // Flex Basis value for new squares
+    // delete current squares in grid
+    container.innerHTML = '';
+    // const currentSquares = document.querySelectorAll(".square");
+    // set new square size based on percentage
 
 
 })
