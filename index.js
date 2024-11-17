@@ -23,3 +23,8 @@ container.addEventListener("mouseout",(event) => {
     }
 })
 
+const btn = document.querySelector("button");
+
+btn.addEventListener("onclick",() => {
+    // button event listener
+})
