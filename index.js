@@ -5,6 +5,7 @@ for (i = 0; i < 16; i++) {
     const square = document.createElement("div");
     square.className = "square";
     square.style.flexBasis = "25%";
+    square.style.opacity = 1.0;
     container.appendChild(square);
 }
 
@@ -21,6 +22,8 @@ container.addEventListener("mouseout", (event) => {
     // change color back on mouse leave
     if (event.target.id != "container") {
         event.target.classList.remove("active");
+        console.log(event.target.style.opacity.value);
+        event.target.style.opacity -= 0.1;
     }
 })
 
@@ -42,3 +45,11 @@ btn.addEventListener("click", (e) => {
         container.appendChild(newSquare);
     }
 })
+
+/* extra credit: darken square by 10% each time:
+
+    make squares turn black instead of red
+    on mouseout, reduce square opacity by 10
+
+
+*/
