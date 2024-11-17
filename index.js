@@ -25,6 +25,10 @@ container.addEventListener("mouseout",(event) => {
 
 const btn = document.querySelector("button");
 
-btn.addEventListener("onclick",() => {
+btn.addEventListener("click",(e) => {
+console.log(e);
     // button event listener
+    let sideCount = prompt("How many squares per side?","(max 100)");
+
+
 })
